@@ -11,10 +11,10 @@ ${loginBtnLogin}=             name=formLogin:j_idt27
 
 *** Keywords ***
 Perform Login
-                              Input text                             ${loginUserTextField}        ${username}
-                              Input text                             ${loginPasswordTextField}    ${password}
-                              Click element                          ${loginBtnLogin}
-                              Wait until page contains               ${dashboardLabel}
+                              Input text                         ${loginUserTextField}        ${username}
+                              Input text                         ${loginPasswordTextField}    ${password}
+                              Click element                      ${loginBtnLogin}
+                              Wait until page contains           ${dashboardLabel}
 
 
 

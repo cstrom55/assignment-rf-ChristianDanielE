@@ -1,4 +1,4 @@
-*** Settings ***
+*** Settings ***0
 Library                   Selenium2Library
 Library                   OperatingSystem
 Resource                  setupTeardown.robot
@@ -18,4 +18,12 @@ Testcase2_CreateClient
                           Perform Login
                           Navigate To Client
                           Create Client
+                          Cleanup Client
                           Perform Logout
+
+Testcase3_EditClient
+                          Perform Login
+                          Navigate To Client
+                          Select Client Edit                   THALLYS
+                          Sleep           5s
+
