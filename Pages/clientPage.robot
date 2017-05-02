@@ -15,7 +15,7 @@ ${clientDeleteButtonXpath}=     //*[@id="j_idt49"]/table/tbody/tr
 ${clientEditButtonXpath}=       //*[@id="j_idt49"]/table/tbody/tr
 ${clientDeletePt2}=             ]/td[7]/a[3]
 ${clientNamePt2}=               ]/td[2]
-${clientEditPt2}=               /td[7]/a[2]
+${clientEditPt2}=               ]/td[7]/a[2]
 
 
 
@@ -57,23 +57,32 @@ Select Client Edit
                                 ${clientDeleteButtonXpath}           Catenate                              SEPARATOR=                             ${clientDeleteButtonXpath}    [                           #adds a [ to the xpath we're building
                                 ${clientDeleteButtonXpath}           Catenate                              SEPARATOR=                             ${clientDeleteButtonXpath}    ${count}                    #adds a number to the xpath (the last row on the table)
                                 ${clientDeleteButtonXpath}           Catenate                              SEPARATOR=                             ${clientDeleteButtonXpath}    ${clientDeletePt2}          #adds the ned of the xpath we're building
+                                #                                    Log to console                        ${clientDeleteButtonXpath}
 
                                 : For                                ${index}                              in range                               1                             ${count}
+                                \                                    # Log to console                      ${index}
                                 \                                    ${forTempVar}                         Catenate                               SEPARATOR=                    ${clientEditButtonXpath}    [
                                 \                                    ${forTempVar}                         Catenate                               SEPARATOR=                    ${forTempVar}               ${index}
                                 \                                    ${forTempVar}                         Catenate                               SEPARATOR=                    ${forTempVar}               ${clientNamePt2}
                                 \                                    ${forTempText}                        Get Text                               xpath=${forTempvar}
+                                \                                    #                                     Log to console                         ${forTempVar}
+                                \                                    #                                     Log to console                         ${forTempText}
                                 \                                    Run Keyword If                        '${forTempText}' == '${clientName}'    Exit For Loop
+                                Log to console                       For loop is over
 
-                                ${xpathToSpecificEditButton}         Catenate                              SEPARATOR=                             ${clientEditButtonXpath}      [
-                                ${xpathToSpecificEditButton}         Catenate                              SEPARATOR=                             ${clientEditButtonXpath}      ${index}
-                                ${xpathToSpecificEditButton}         Catenate                              SEPARATOR=                             ${clientEditButtonXpath}      ${clientEditPt2}
+                                Log to console                       ${forTempVar}
+
+
+                                ${tempvar1}                          Catenate                              SEPARATOR=                             ${clientEditButtonXpath}      [
+                                ${tempvar2}                          Catenate                              SEPARATOR=                             ${tempvar1}                   ${index}
+                                ${xpathToSpecificEditButton}         Catenate                              SEPARATOR=                             ${tempvar2}                   ${clientEditPt2}
+
+                                Log to console                       ${clientName}
+
+                                Log to console                       ${xpathToSpecificEditButton}
+
 
                                 Click element                        xpath=${xpathToSpecificEditButton}
-
-
-
-
 
 
 

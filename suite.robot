@@ -1,4 +1,4 @@
-*** Settings ***0
+*** Settings ***
 Library                   Selenium2Library
 Library                   OperatingSystem
 Resource                  setupTeardown.robot

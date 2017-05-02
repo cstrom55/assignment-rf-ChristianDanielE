@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20170430 06:01:22.055" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
+<robot generated="20170502 12:07:04.178" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
 <suite source="/home/robot/workspace/assignment-rf-ChristianDanielE" id="s1" name="assignment-rf-ChristianDanielE">
 <suite source="/home/robot/workspace/assignment-rf-ChristianDanielE/suite.robot" id="s1-s1" name="Suite">
 <test id="s1-s1-t1" name="Testcase3_EditClient">
@@ -10,8 +10,8 @@
 <arg>${driverName}</arg>
 <arg>${driverLocation}</arg>
 </arguments>
-<msg timestamp="20170430 06:01:22.332" level="INFO">Environment variable 'webdriver.chrome.driver' set to value '/usr/local/bin/chromedriver'.</msg>
-<status status="PASS" endtime="20170430 06:01:22.332" starttime="20170430 06:01:22.331"></status>
+<msg timestamp="20170502 12:07:05.095" level="INFO">Environment variable 'webdriver.chrome.driver' set to value '/usr/local/bin/chromedriver'.</msg>
+<status status="PASS" endtime="20170502 12:07:05.095" starttime="20170502 12:07:05.093"></status>
 </kw>
 <kw name="Chrome With Preferences" library="setupTeardown">
 <kw name="Evaluate" library="BuiltIn">
@@ -23,8 +23,8 @@
 <assign>
 <var>${chrome_options}</var>
 </assign>
-<msg timestamp="20170430 06:01:22.335" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7ff25582f1d0&gt;</msg>
-<status status="PASS" endtime="20170430 06:01:22.335" starttime="20170430 06:01:22.334"></status>
+<msg timestamp="20170502 12:07:05.104" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7f30d7667150&gt;</msg>
+<status status="PASS" endtime="20170502 12:07:05.109" starttime="20170502 12:07:05.100"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -34,8 +34,8 @@
 <assign>
 <var>${prefs}</var>
 </assign>
-<msg timestamp="20170430 06:01:22.338" level="INFO">${prefs} = {u'credentials_enable_service': False}</msg>
-<status status="PASS" endtime="20170430 06:01:22.338" starttime="20170430 06:01:22.336"></status>
+<msg timestamp="20170502 12:07:05.123" level="INFO">${prefs} = {u'credentials_enable_service': False}</msg>
+<status status="PASS" endtime="20170502 12:07:05.123" starttime="20170502 12:07:05.116"></status>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <doc>Calls the named method of the given object with the provided arguments.</doc>
@@ -45,7 +45,7 @@
 <arg>prefs</arg>
 <arg>${prefs}</arg>
 </arguments>
-<status status="PASS" endtime="20170430 06:01:22.340" starttime="20170430 06:01:22.339"></status>
+<status status="PASS" endtime="20170502 12:07:05.128" starttime="20170502 12:07:05.125"></status>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <doc>Calls the named method of the given object with the provided arguments.</doc>
@@ -54,7 +54,7 @@
 <arg>add_argument</arg>
 <arg>--disable-infobars</arg>
 </arguments>
-<status status="PASS" endtime="20170430 06:01:22.341" starttime="20170430 06:01:22.341"></status>
+<status status="PASS" endtime="20170502 12:07:05.131" starttime="20170502 12:07:05.129"></status>
 </kw>
 <kw name="Create Webdriver" library="Selenium2Library">
 <doc>Creates an instance of a WebDriver.</doc>
@@ -62,65 +62,65 @@
 <arg>Chrome</arg>
 <arg>chrome_options=${chrome_options}</arg>
 </arguments>
-<msg timestamp="20170430 06:01:22.343" level="INFO">Creating an instance of the Chrome WebDriver</msg>
-<status status="PASS" endtime="20170430 06:01:23.858" starttime="20170430 06:01:22.342"></status>
+<msg timestamp="20170502 12:07:05.132" level="INFO">Creating an instance of the Chrome WebDriver</msg>
+<status status="PASS" endtime="20170502 12:07:08.691" starttime="20170502 12:07:05.131"></status>
 </kw>
 <kw name="Go To" library="Selenium2Library">
 <doc>Navigates the active browser instance to the provided URL.</doc>
 <arguments>
 <arg>${baseURL}</arg>
 </arguments>
-<msg timestamp="20170430 06:01:23.860" level="INFO">Opening url 'http://localhost:8080/hotel/faces/login/login.xhtml'</msg>
-<status status="PASS" endtime="20170430 06:01:24.316" starttime="20170430 06:01:23.859"></status>
+<msg timestamp="20170502 12:07:08.695" level="INFO">Opening url 'http://localhost:8080/hotel/faces/login/login.xhtml'</msg>
+<status status="PASS" endtime="20170502 12:07:10.115" starttime="20170502 12:07:08.693"></status>
 </kw>
-<status status="PASS" endtime="20170430 06:01:24.317" starttime="20170430 06:01:22.333"></status>
+<status status="PASS" endtime="20170502 12:07:10.115" starttime="20170502 12:07:05.096"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20170430 06:01:24.489" starttime="20170430 06:01:24.318"></status>
+<status status="PASS" endtime="20170502 12:07:10.344" starttime="20170502 12:07:10.116"></status>
 </kw>
 <kw name="Set Selenium Speed" library="Selenium2Library">
 <doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
 <arguments>
 <arg>.2</arg>
 </arguments>
-<status status="PASS" endtime="20170430 06:01:24.491" starttime="20170430 06:01:24.490"></status>
+<status status="PASS" endtime="20170502 12:07:10.348" starttime="20170502 12:07:10.345"></status>
 </kw>
 <kw name="Set Selenium Timeout" library="Selenium2Library">
 <doc>Sets the timeout in seconds used by various keywords.</doc>
 <arguments>
 <arg>20</arg>
 </arguments>
-<status status="PASS" endtime="20170430 06:01:24.697" starttime="20170430 06:01:24.492"></status>
+<status status="PASS" endtime="20170502 12:07:10.569" starttime="20170502 12:07:10.349"></status>
 </kw>
 <kw name="Delete All Cookies" library="Selenium2Library">
 <doc>Deletes all cookies.</doc>
-<status status="PASS" endtime="20170430 06:01:24.907" starttime="20170430 06:01:24.698"></status>
+<status status="PASS" endtime="20170502 12:07:10.812" starttime="20170502 12:07:10.573"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>${loginLabel}</arg>
 </arguments>
-<status status="PASS" endtime="20170430 06:01:25.138" starttime="20170430 06:01:24.908"></status>
+<status status="PASS" endtime="20170502 12:07:11.096" starttime="20170502 12:07:10.812"></status>
 </kw>
 <kw name="Location Should Be" library="Selenium2Library">
 <doc>Verifies that current URL is exactly `url`.</doc>
 <arguments>
 <arg>${baseURL}</arg>
 </arguments>
-<msg timestamp="20170430 06:01:25.352" level="INFO">Current location is 'http://localhost:8080/hotel/faces/login/login.xhtml'.</msg>
-<status status="PASS" endtime="20170430 06:01:25.352" starttime="20170430 06:01:25.139"></status>
+<msg timestamp="20170502 12:07:11.309" level="INFO">Current location is 'http://localhost:8080/hotel/faces/login/login.xhtml'.</msg>
+<status status="PASS" endtime="20170502 12:07:11.310" starttime="20170502 12:07:11.097"></status>
 </kw>
 <kw name="Title Should Be" library="Selenium2Library">
 <doc>Verifies that current page title equals `title`.</doc>
 <arguments>
 <arg>${loginTitle}</arg>
 </arguments>
-<msg timestamp="20170430 06:01:25.563" level="INFO">Page title is 'Hotel Accomodation - login page'.</msg>
-<status status="PASS" endtime="20170430 06:01:25.564" starttime="20170430 06:01:25.353"></status>
+<msg timestamp="20170502 12:07:11.524" level="INFO">Page title is 'Hotel Accomodation - login page'.</msg>
+<status status="PASS" endtime="20170502 12:07:11.525" starttime="20170502 12:07:11.310"></status>
 </kw>
-<status status="PASS" endtime="20170430 06:01:25.565" starttime="20170430 06:01:22.330"></status>
+<status status="PASS" endtime="20170502 12:07:11.525" starttime="20170502 12:07:05.090"></status>
 </kw>
 <kw name="Perform Login" library="loginPage">
 <kw name="Input Text" library="Selenium2Library">
@@ -129,8 +129,8 @@
 <arg>${loginUserTextField}</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20170430 06:01:25.566" level="INFO">Typing text 'marc' into text field 'id=formLogin:login'</msg>
-<status status="PASS" endtime="20170430 06:01:26.347" starttime="20170430 06:01:25.566"></status>
+<msg timestamp="20170502 12:07:11.528" level="INFO">Typing text 'marc' into text field 'id=formLogin:login'</msg>
+<status status="PASS" endtime="20170502 12:07:12.622" starttime="20170502 12:07:11.527"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -138,25 +138,25 @@
 <arg>${loginPasswordTextField}</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20170430 06:01:26.349" level="INFO">Typing text '1010' into text field 'id=formLogin:senha'</msg>
-<status status="PASS" endtime="20170430 06:01:27.081" starttime="20170430 06:01:26.348"></status>
+<msg timestamp="20170502 12:07:12.624" level="INFO">Typing text '1010' into text field 'id=formLogin:senha'</msg>
+<status status="PASS" endtime="20170502 12:07:13.558" starttime="20170502 12:07:12.623"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${loginBtnLogin}</arg>
 </arguments>
-<msg timestamp="20170430 06:01:27.082" level="INFO">Clicking element 'name=formLogin:j_idt27'.</msg>
-<status status="PASS" endtime="20170430 06:01:27.861" starttime="20170430 06:01:27.081"></status>
+<msg timestamp="20170502 12:07:13.560" level="INFO">Clicking element 'name=formLogin:j_idt27'.</msg>
+<status status="PASS" endtime="20170502 12:07:15.306" starttime="20170502 12:07:13.559"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>${dashboardLabel}</arg>
 </arguments>
-<status status="PASS" endtime="20170430 06:01:28.097" starttime="20170430 06:01:27.862"></status>
+<status status="PASS" endtime="20170502 12:07:15.567" starttime="20170502 12:07:15.308"></status>
 </kw>
-<status status="PASS" endtime="20170430 06:01:28.112" starttime="20170430 06:01:25.565"></status>
+<status status="PASS" endtime="20170502 12:07:15.571" starttime="20170502 12:07:11.526"></status>
 </kw>
 <kw name="Navigate To Client" library="dashboardPage">
 <kw name="Click Element" library="Selenium2Library">
@@ -164,17 +164,17 @@
 <arguments>
 <arg>${dashboardSidebarClientButton}</arg>
 </arguments>
-<msg timestamp="20170430 06:01:28.114" level="INFO">Clicking element 'xpath=//*[@id="side-menu"]/li[5]/a'.</msg>
-<status status="PASS" endtime="20170430 06:01:28.798" starttime="20170430 06:01:28.114"></status>
+<msg timestamp="20170502 12:07:15.578" level="INFO">Clicking element 'xpath=//*[@id="side-menu"]/li[5]/a'.</msg>
+<status status="PASS" endtime="20170502 12:07:17.246" starttime="20170502 12:07:15.574"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>${clientLabel}</arg>
 </arguments>
-<status status="PASS" endtime="20170430 06:01:29.024" starttime="20170430 06:01:28.799"></status>
+<status status="PASS" endtime="20170502 12:07:17.496" starttime="20170502 12:07:17.247"></status>
 </kw>
-<status status="PASS" endtime="20170430 06:01:29.024" starttime="20170430 06:01:28.113"></status>
+<status status="PASS" endtime="20170502 12:07:17.497" starttime="20170502 12:07:15.573"></status>
 </kw>
 <kw name="Select Client Edit" library="clientPage">
 <arguments>
@@ -188,8 +188,8 @@
 <assign>
 <var>${count}</var>
 </assign>
-<msg timestamp="20170430 06:01:29.247" level="INFO">${count} = 4</msg>
-<status status="PASS" endtime="20170430 06:01:29.247" starttime="20170430 06:01:29.025"></status>
+<msg timestamp="20170502 12:07:17.769" level="INFO">${count} = 5</msg>
+<status status="PASS" endtime="20170502 12:07:17.771" starttime="20170502 12:07:17.510"></status>
 </kw>
 <kw name="Catenate" library="BuiltIn">
 <doc>Catenates the given items together and returns the resulted string.</doc>
@@ -201,8 +201,8 @@
 <assign>
 <var>${clientDeleteButtonXpath}</var>
 </assign>
-<msg timestamp="20170430 06:01:29.248" level="INFO">${clientDeleteButtonXpath} = //*[@id="j_idt49"]/table/tbody/tr[</msg>
-<status status="PASS" endtime="20170430 06:01:29.248" starttime="20170430 06:01:29.248"></status>
+<msg timestamp="20170502 12:07:17.774" level="INFO">${clientDeleteButtonXpath} = //*[@id="j_idt49"]/table/tbody/tr[</msg>
+<status status="PASS" endtime="20170502 12:07:17.774" starttime="20170502 12:07:17.773"></status>
 </kw>
 <kw name="Catenate" library="BuiltIn">
 <doc>Catenates the given items together and returns the resulted string.</doc>
@@ -214,8 +214,8 @@
 <assign>
 <var>${clientDeleteButtonXpath}</var>
 </assign>
-<msg timestamp="20170430 06:01:29.250" level="INFO">${clientDeleteButtonXpath} = //*[@id="j_idt49"]/table/tbody/tr[4</msg>
-<status status="PASS" endtime="20170430 06:01:29.250" starttime="20170430 06:01:29.249"></status>
+<msg timestamp="20170502 12:07:17.776" level="INFO">${clientDeleteButtonXpath} = //*[@id="j_idt49"]/table/tbody/tr[5</msg>
+<status status="PASS" endtime="20170502 12:07:17.776" starttime="20170502 12:07:17.775"></status>
 </kw>
 <kw name="Catenate" library="BuiltIn">
 <doc>Catenates the given items together and returns the resulted string.</doc>
@@ -227,8 +227,8 @@
 <assign>
 <var>${clientDeleteButtonXpath}</var>
 </assign>
-<msg timestamp="20170430 06:01:29.252" level="INFO">${clientDeleteButtonXpath} = //*[@id="j_idt49"]/table/tbody/tr[4]/td[7]/a[3]</msg>
-<status status="PASS" endtime="20170430 06:01:29.252" starttime="20170430 06:01:29.251"></status>
+<msg timestamp="20170502 12:07:17.779" level="INFO">${clientDeleteButtonXpath} = //*[@id="j_idt49"]/table/tbody/tr[5]/td[7]/a[3]</msg>
+<status status="PASS" endtime="20170502 12:07:17.779" starttime="20170502 12:07:17.777"></status>
 </kw>
 <kw type="for" name="${index} IN RANGE [ 1 | ${count} ]">
 <kw type="foritem" name="${index} = 1">
@@ -242,8 +242,8 @@
 <assign>
 <var>${forTempVar}</var>
 </assign>
-<msg timestamp="20170430 06:01:29.253" level="INFO">${forTempVar} = //*[@id="j_idt49"]/table/tbody/tr[</msg>
-<status status="PASS" endtime="20170430 06:01:29.254" starttime="20170430 06:01:29.253"></status>
+<msg timestamp="20170502 12:07:17.792" level="INFO">${forTempVar} = //*[@id="j_idt49"]/table/tbody/tr[</msg>
+<status status="PASS" endtime="20170502 12:07:17.792" starttime="20170502 12:07:17.791"></status>
 </kw>
 <kw name="Catenate" library="BuiltIn">
 <doc>Catenates the given items together and returns the resulted string.</doc>
@@ -255,8 +255,8 @@
 <assign>
 <var>${forTempVar}</var>
 </assign>
-<msg timestamp="20170430 06:01:29.255" level="INFO">${forTempVar} = //*[@id="j_idt49"]/table/tbody/tr[1</msg>
-<status status="PASS" endtime="20170430 06:01:29.255" starttime="20170430 06:01:29.254"></status>
+<msg timestamp="20170502 12:07:17.806" level="INFO">${forTempVar} = //*[@id="j_idt49"]/table/tbody/tr[1</msg>
+<status status="PASS" endtime="20170502 12:07:17.808" starttime="20170502 12:07:17.798"></status>
 </kw>
 <kw name="Catenate" library="BuiltIn">
 <doc>Catenates the given items together and returns the resulted string.</doc>
@@ -268,8 +268,8 @@
 <assign>
 <var>${forTempVar}</var>
 </assign>
-<msg timestamp="20170430 06:01:29.256" level="INFO">${forTempVar} = //*[@id="j_idt49"]/table/tbody/tr[1]/td[2]</msg>
-<status status="PASS" endtime="20170430 06:01:29.256" starttime="20170430 06:01:29.255"></status>
+<msg timestamp="20170502 12:07:17.819" level="INFO">${forTempVar} = //*[@id="j_idt49"]/table/tbody/tr[1]/td[2]</msg>
+<status status="PASS" endtime="20170502 12:07:17.822" starttime="20170502 12:07:17.817"></status>
 </kw>
 <kw name="Get Text" library="Selenium2Library">
 <doc>Returns the text value of element identified by `locator`.</doc>
@@ -279,8 +279,8 @@
 <assign>
 <var>${forTempText}</var>
 </assign>
-<msg timestamp="20170430 06:01:29.719" level="INFO">${forTempText} = JOÃO PAULO</msg>
-<status status="PASS" endtime="20170430 06:01:29.720" starttime="20170430 06:01:29.257"></status>
+<msg timestamp="20170502 12:07:18.362" level="INFO">${forTempText} = JOÃO PAULO</msg>
+<status status="PASS" endtime="20170502 12:07:18.362" starttime="20170502 12:07:17.826"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -288,9 +288,9 @@
 <arg>'${forTempText}' == '${clientName}'</arg>
 <arg>Exit For Loop</arg>
 </arguments>
-<status status="PASS" endtime="20170430 06:01:29.721" starttime="20170430 06:01:29.720"></status>
+<status status="PASS" endtime="20170502 12:07:18.364" starttime="20170502 12:07:18.363"></status>
 </kw>
-<status status="PASS" endtime="20170430 06:01:29.722" starttime="20170430 06:01:29.252"></status>
+<status status="PASS" endtime="20170502 12:07:18.365" starttime="20170502 12:07:17.790"></status>
 </kw>
 <kw type="foritem" name="${index} = 2">
 <kw name="Catenate" library="BuiltIn">
@@ -303,8 +303,8 @@
 <assign>
 <var>${forTempVar}</var>
 </assign>
-<msg timestamp="20170430 06:01:29.723" level="INFO">${forTempVar} = //*[@id="j_idt49"]/table/tbody/tr[</msg>
-<status status="PASS" endtime="20170430 06:01:29.724" starttime="20170430 06:01:29.722"></status>
+<msg timestamp="20170502 12:07:18.376" level="INFO">${forTempVar} = //*[@id="j_idt49"]/table/tbody/tr[</msg>
+<status status="PASS" endtime="20170502 12:07:18.378" starttime="20170502 12:07:18.374"></status>
 </kw>
 <kw name="Catenate" library="BuiltIn">
 <doc>Catenates the given items together and returns the resulted string.</doc>
@@ -316,8 +316,8 @@
 <assign>
 <var>${forTempVar}</var>
 </assign>
-<msg timestamp="20170430 06:01:29.725" level="INFO">${forTempVar} = //*[@id="j_idt49"]/table/tbody/tr[2</msg>
-<status status="PASS" endtime="20170430 06:01:29.725" starttime="20170430 06:01:29.724"></status>
+<msg timestamp="20170502 12:07:18.379" level="INFO">${forTempVar} = //*[@id="j_idt49"]/table/tbody/tr[2</msg>
+<status status="PASS" endtime="20170502 12:07:18.379" starttime="20170502 12:07:18.378"></status>
 </kw>
 <kw name="Catenate" library="BuiltIn">
 <doc>Catenates the given items together and returns the resulted string.</doc>
@@ -329,8 +329,8 @@
 <assign>
 <var>${forTempVar}</var>
 </assign>
-<msg timestamp="20170430 06:01:29.726" level="INFO">${forTempVar} = //*[@id="j_idt49"]/table/tbody/tr[2]/td[2]</msg>
-<status status="PASS" endtime="20170430 06:01:29.726" starttime="20170430 06:01:29.725"></status>
+<msg timestamp="20170502 12:07:18.394" level="INFO">${forTempVar} = //*[@id="j_idt49"]/table/tbody/tr[2]/td[2]</msg>
+<status status="PASS" endtime="20170502 12:07:18.394" starttime="20170502 12:07:18.380"></status>
 </kw>
 <kw name="Get Text" library="Selenium2Library">
 <doc>Returns the text value of element identified by `locator`.</doc>
@@ -340,8 +340,8 @@
 <assign>
 <var>${forTempText}</var>
 </assign>
-<msg timestamp="20170430 06:01:30.180" level="INFO">${forTempText} = THALLYS</msg>
-<status status="PASS" endtime="20170430 06:01:30.181" starttime="20170430 06:01:29.726"></status>
+<msg timestamp="20170502 12:07:18.911" level="INFO">${forTempText} = THALLYS</msg>
+<status status="PASS" endtime="20170502 12:07:18.912" starttime="20170502 12:07:18.395"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -351,28 +351,28 @@
 </arguments>
 <kw name="Exit For Loop" library="BuiltIn">
 <doc>Stops executing the enclosing for loop.</doc>
-<msg timestamp="20170430 06:01:30.182" level="INFO">Exiting for loop altogether.</msg>
-<status status="PASS" endtime="20170430 06:01:30.182" starttime="20170430 06:01:30.182"></status>
+<msg timestamp="20170502 12:07:18.917" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" endtime="20170502 12:07:18.925" starttime="20170502 12:07:18.914"></status>
 </kw>
-<status status="PASS" endtime="20170430 06:01:30.182" starttime="20170430 06:01:30.181"></status>
+<status status="PASS" endtime="20170502 12:07:18.928" starttime="20170502 12:07:18.913"></status>
 </kw>
-<status status="PASS" endtime="20170430 06:01:30.182" starttime="20170430 06:01:29.722"></status>
+<status status="PASS" endtime="20170502 12:07:18.931" starttime="20170502 12:07:18.371"></status>
 </kw>
-<status status="PASS" endtime="20170430 06:01:30.183" starttime="20170430 06:01:29.252"></status>
+<status status="PASS" endtime="20170502 12:07:18.934" starttime="20170502 12:07:17.788"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>For loop is over</arg>
 </arguments>
-<status status="PASS" endtime="20170430 06:01:30.183" starttime="20170430 06:01:30.183"></status>
+<status status="PASS" endtime="20170502 12:07:18.940" starttime="20170502 12:07:18.939"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${forTempVar}</arg>
 </arguments>
-<status status="PASS" endtime="20170430 06:01:30.184" starttime="20170430 06:01:30.183"></status>
+<status status="PASS" endtime="20170502 12:07:18.941" starttime="20170502 12:07:18.940"></status>
 </kw>
 <kw name="Catenate" library="BuiltIn">
 <doc>Catenates the given items together and returns the resulted string.</doc>
@@ -382,81 +382,81 @@
 <arg>[</arg>
 </arguments>
 <assign>
-<var>${xpathToSpecificEditButton}</var>
+<var>${tempvar1}</var>
 </assign>
-<msg timestamp="20170430 06:01:30.184" level="INFO">${xpathToSpecificEditButton} = //*[@id="j_idt49"]/table/tbody/tr[</msg>
-<status status="PASS" endtime="20170430 06:01:30.184" starttime="20170430 06:01:30.184"></status>
+<msg timestamp="20170502 12:07:18.943" level="INFO">${tempvar1} = //*[@id="j_idt49"]/table/tbody/tr[</msg>
+<status status="PASS" endtime="20170502 12:07:18.944" starttime="20170502 12:07:18.942"></status>
 </kw>
 <kw name="Catenate" library="BuiltIn">
 <doc>Catenates the given items together and returns the resulted string.</doc>
 <arguments>
 <arg>SEPARATOR=</arg>
-<arg>${clientEditButtonXpath}</arg>
+<arg>${tempvar1}</arg>
 <arg>${index}</arg>
 </arguments>
 <assign>
-<var>${xpathToSpecificEditButton}</var>
+<var>${tempvar2}</var>
 </assign>
-<msg timestamp="20170430 06:01:30.188" level="INFO">${xpathToSpecificEditButton} = //*[@id="j_idt49"]/table/tbody/tr2</msg>
-<status status="PASS" endtime="20170430 06:01:30.189" starttime="20170430 06:01:30.185"></status>
+<msg timestamp="20170502 12:07:18.946" level="INFO">${tempvar2} = //*[@id="j_idt49"]/table/tbody/tr[2</msg>
+<status status="PASS" endtime="20170502 12:07:18.946" starttime="20170502 12:07:18.944"></status>
 </kw>
 <kw name="Catenate" library="BuiltIn">
 <doc>Catenates the given items together and returns the resulted string.</doc>
 <arguments>
 <arg>SEPARATOR=</arg>
-<arg>${clientEditButtonXpath}</arg>
+<arg>${tempvar2}</arg>
 <arg>${clientEditPt2}</arg>
 </arguments>
 <assign>
 <var>${xpathToSpecificEditButton}</var>
 </assign>
-<msg timestamp="20170430 06:01:30.189" level="INFO">${xpathToSpecificEditButton} = //*[@id="j_idt49"]/table/tbody/tr/td[7]/a[2]</msg>
-<status status="PASS" endtime="20170430 06:01:30.189" starttime="20170430 06:01:30.189"></status>
+<msg timestamp="20170502 12:07:18.948" level="INFO">${xpathToSpecificEditButton} = //*[@id="j_idt49"]/table/tbody/tr[2]/td[7]/a[2]</msg>
+<status status="PASS" endtime="20170502 12:07:18.949" starttime="20170502 12:07:18.947"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${clientName}</arg>
 </arguments>
-<status status="PASS" endtime="20170430 06:01:30.190" starttime="20170430 06:01:30.190"></status>
+<status status="PASS" endtime="20170502 12:07:18.957" starttime="20170502 12:07:18.953"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${xpathToSpecificEditButton}</arg>
 </arguments>
-<status status="PASS" endtime="20170430 06:01:30.191" starttime="20170430 06:01:30.191"></status>
+<status status="PASS" endtime="20170502 12:07:18.958" starttime="20170502 12:07:18.957"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>xpath=${xpathToSpecificEditButton}</arg>
 </arguments>
-<msg timestamp="20170430 06:01:30.192" level="INFO">Clicking element 'xpath=//*[@id="j_idt49"]/table/tbody/tr/td[7]/a[2]'.</msg>
-<status status="PASS" endtime="20170430 06:01:30.962" starttime="20170430 06:01:30.192"></status>
+<msg timestamp="20170502 12:07:18.960" level="INFO">Clicking element 'xpath=//*[@id="j_idt49"]/table/tbody/tr[2]/td[7]/a[2]'.</msg>
+<status status="PASS" endtime="20170502 12:07:20.620" starttime="20170502 12:07:18.959"></status>
 </kw>
-<status status="PASS" endtime="20170430 06:01:30.963" starttime="20170430 06:01:29.025"></status>
+<status status="PASS" endtime="20170502 12:07:20.621" starttime="20170502 12:07:17.507"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20170430 06:01:35.964" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20170430 06:01:35.965" starttime="20170430 06:01:30.963"></status>
+<msg timestamp="20170502 12:07:25.626" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20170502 12:07:25.626" starttime="20170502 12:07:20.622"></status>
 </kw>
 <kw type="teardown" name="Teardown" library="setupTeardown">
 <kw name="Close All Browsers" library="Selenium2Library">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" endtime="20170430 06:01:36.226" starttime="20170430 06:01:35.966"></status>
+<status status="PASS" endtime="20170502 12:07:25.901" starttime="20170502 12:07:25.628"></status>
 </kw>
-<status status="PASS" endtime="20170430 06:01:36.227" starttime="20170430 06:01:35.966"></status>
+<status status="PASS" endtime="20170502 12:07:25.903" starttime="20170502 12:07:25.627"></status>
 </kw>
-<status status="PASS" endtime="20170430 06:01:36.227" critical="yes" starttime="20170430 06:01:22.328"></status>
+<status status="PASS" endtime="20170502 12:07:25.904" critical="yes" starttime="20170502 12:07:05.084"></status>
 </test>
-<status status="PASS" endtime="20170430 06:01:36.228" starttime="20170430 06:01:22.153"></status>
+<status status="PASS" endtime="20170502 12:07:25.909" starttime="20170502 12:07:04.472"></status>
 </suite>
-<status status="PASS" endtime="20170430 06:01:36.231" starttime="20170430 06:01:22.117"></status>
+<status status="PASS" endtime="20170502 12:07:25.939" starttime="20170502 12:07:04.330"></status>
 </suite>
 <statistics>
 <total>
@@ -471,8 +471,8 @@
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20170430 06:01:22.313" level="ERROR">Error in file '/home/robot/workspace/assignment-rf-ChristianDanielE/suite.robot': Non-existing setting 'Test setup'.</msg>
-<msg timestamp="20170430 06:01:22.314" level="ERROR">Error in file '/home/robot/workspace/assignment-rf-ChristianDanielE/suite.robot': Non-existing setting 'Test teardown'.</msg>
-<msg timestamp="20170430 06:01:22.314" level="ERROR">Error in file '/home/robot/workspace/assignment-rf-ChristianDanielE/Pages/clientPage.robot': Resource file '/home/robot/workspace/assignment-rf-ChristianDanielE/suite.robot' contains a test case table which is not allowed.</msg>
+<msg timestamp="20170502 12:07:05.047" level="ERROR">Error in file '/home/robot/workspace/assignment-rf-ChristianDanielE/suite.robot': Non-existing setting 'Test setup'.</msg>
+<msg timestamp="20170502 12:07:05.048" level="ERROR">Error in file '/home/robot/workspace/assignment-rf-ChristianDanielE/suite.robot': Non-existing setting 'Test teardown'.</msg>
+<msg timestamp="20170502 12:07:05.049" level="ERROR">Error in file '/home/robot/workspace/assignment-rf-ChristianDanielE/Pages/clientPage.robot': Resource file '/home/robot/workspace/assignment-rf-ChristianDanielE/suite.robot' contains a test case table which is not allowed.</msg>
 </errors>
 </robot>
