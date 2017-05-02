@@ -26,6 +26,7 @@ Testcase2_CreateClient
                             Navigate To Client
                             Create Client
                             Perform Logout
+               
 Testcase6_SearchFunction
                             Perform Login
                             Perform Search                 ${searchInput}
@@ -39,8 +40,14 @@ Testcase7_Navigation
                             Navigate To User
                             Navigate To Dashboard
                             Perform Logout
-
-
+##CreateReservation gives persistence error, can't create new reservations.
+Testcase8_CreateReservation
+                            Perform Login
+                            Navigate To Reservation
+                            Create Reservation
+                            #Navigate To Reservation
+                            #Delete Reservation
+                            Perform Logout
 
 
 
