@@ -10,6 +10,10 @@ Resource                  ./Cred/loginCred.robot
 Test setup                Setup
 Test teardown             Teardown
 
+*** Variables ***
+# JOÃO PAULO    THALLYS    Yuri        MARCOS OLIVEIVA
+${TestClientName}          JOÃO PAULO
+
 *** Test Cases ***
 Testcase1_LoginLogout
                           Perform Login
@@ -24,6 +28,6 @@ Testcase2_CreateClient
 Testcase3_EditClient
                           Perform Login
                           Navigate To Client
-                          Select Client Edit                   THALLYS
-                          Sleep           5s
+                          Select Client Edit                  ${TestClientName}
+                          #Sleep           5s
 
