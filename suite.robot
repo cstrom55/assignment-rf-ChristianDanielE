@@ -11,8 +11,8 @@ Test setup                Setup
 Test teardown             Teardown
 
 *** Variables ***
-# JOÃO PAULO    THALLYS    Yuri        MARCOS OLIVEIVA
-${TestClientName}          JOÃO PAULO
+# JOÃO PAULO              THALLYS                        Yuri                 MARCOS OLIVEIVA    YANNE
+${TestClientName}         THALLYS
 
 *** Test Cases ***
 Testcase1_LoginLogout
@@ -22,12 +22,27 @@ Testcase2_CreateClient
                           Perform Login
                           Navigate To Client
                           Create Client
-                          Cleanup Client
+                          Delete Client
                           Perform Logout
 
 Testcase3_EditClient
                           Perform Login
                           Navigate To Client
-                          Select Client Edit                  ${TestClientName}
-                          #Sleep           5s
+                          Select Client Edit             ${TestClientName}
+                          Reset Client Edit
+                          Perform Logout
+
+Testcase4_DeleteClient
+                          Perform Login
+                          Navigate To Client
+                          Delete Client
+                          Perform Logout
+
+Testcase5_HomeButton
+                          Perform Login
+                          Navigate to Reservation
+                          Test HomeButton
+                          Perform Logout
+
+
 
