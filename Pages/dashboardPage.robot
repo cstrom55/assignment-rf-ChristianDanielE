@@ -1,6 +1,8 @@
 *** Settings ***
 Resource                                 loginPage.robot
 Resource                                 clientPage.robot
+Resource                                 reservationPage.robot
+
 *** Variables ***
 ${dashboardTitle}=                       Dashboard
 ${dashboardLabel}=                       Dashboard
@@ -17,6 +19,7 @@ ${dashboardSearchButton}=                xpath=//*[@id="side-menu"]/li[1]/div/sp
 ${dashboardSearchResultTitle}=           Search results:
 
 *** Keywords ***
+
 Perform Logout
                                          Click element                                    ${dashboardDropdownMenu}
                                          Wait until page contains element                 ${dashboardDropdownLogoutButton}
@@ -46,5 +49,4 @@ Perform Search
                                          Input Text                                       ${dashboardSearchTextArea}              ${searchInput}
                                          Click Element                                    ${dashboardSearchButton}
                                          Wait until page contains                         ${dashboardSearchResultTitle}
-
 

@@ -1,3 +1,4 @@
+
 *** Settings ***
 Resource                      ../Cred/loginCred.robot
 Resource                      dashboardPage.robot
@@ -15,6 +16,4 @@ Perform Login
                               Input text                             ${loginPasswordTextField}    ${password}
                               Click element                          ${loginBtnLogin}
                               Wait until page contains               ${dashboardLabel}
-
-
 
