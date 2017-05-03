@@ -3,7 +3,6 @@ Resource                                 loginPage.robot
 Resource                                 clientPage.robot
 Resource                                 reservationPage.robot
 
-
 *** Variables ***
 ${dashboardTitle}=                       Dashboard
 ${dashboardLabel}=                       Dashboard
@@ -18,7 +17,6 @@ ${dashboardSidebarDashboardButton}=      xpath=//*[@id="side-menu"]/li[2]/a
 ${dashboardSearchTextArea}=              xpath=//*[@id="side-menu"]/li[1]/div/input
 ${dashboardSearchButton}=                xpath=//*[@id="side-menu"]/li[1]/div/span
 ${dashboardSearchResultTitle}=           Search results:
-
 
 *** Keywords ***
 

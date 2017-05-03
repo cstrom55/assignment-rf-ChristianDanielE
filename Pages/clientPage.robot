@@ -86,6 +86,7 @@ ${deleteClientXpathEnd}                   ]/td[7]/a[3]
 ${deleteClientMessage}                    Client was successfully deleted.
 
 
+
 *** Keywords ***
 
 Create Client
@@ -217,3 +218,4 @@ Edit Client Recreate
                                           Click Element                                      ${clientShowAllUsersButton}
                                           Wait Until Page Contains                           ${clientLabel}
                                           Page Should Contain                                ${TestClientName}
+

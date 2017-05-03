@@ -5,3 +5,4 @@ Resource             clientPage.robot
 *** Variables ***
 ${bedroomTitle}=     List
 ${bedroomLabel}=     Create New Bedroom
+

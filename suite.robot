@@ -71,5 +71,3 @@ Testcase8_CreateReservation
                                #Navigate To Reservation
                                #Delete Reservation
                                Perform Logout
-
-

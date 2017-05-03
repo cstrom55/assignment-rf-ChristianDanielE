@@ -4,3 +4,4 @@ Resource             clientPage.robot
 *** Variables ***
 ${billTitle}=        List
 ${billLabel}=        Create New Bill
+
