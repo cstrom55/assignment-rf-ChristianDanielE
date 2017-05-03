@@ -1,7 +1,9 @@
 *** Settings ***
-Resource                             loginPage.robot
-Resource                             clientPage.robot
-Resource                             reservationPage.robot
+Resource                                 loginPage.robot
+Resource                                 clientPage.robot
+Resource                                 reservationPage.robot
+
+
 *** Variables ***
 ${dashboardTitle}=                       Dashboard
 ${dashboardLabel}=                       Dashboard
@@ -18,21 +20,35 @@ ${dashboardSearchButton}=                xpath=//*[@id="side-menu"]/li[1]/div/sp
 ${dashboardSearchResultTitle}=           Search results:
 
 
-
-
-
 *** Keywords ***
-Perform Logout
-                                     Click element                                    ${dashboardDropdownMenu}
-                                     Wait until page contains element                 ${dashboardDropdownLogoutButton}
-                                     Click element                                    ${dashboardDropdownLogoutButton}
-                                     Wait until page contains                         ${loginLabel}
-                                     Title should be                                  ${loginTitle}
-Navigate To Client
-                                     Click Element                                    ${dashboardSidebarClientButton}
-                                     Wait Until Page Contains                         ${clientLabel}
 
+Perform Logout
+                                         Click element                                    ${dashboardDropdownMenu}
+                                         Wait until page contains element                 ${dashboardDropdownLogoutButton}
+                                         Click element                                    ${dashboardDropdownLogoutButton}
+                                         Wait until page contains                         ${loginLabel}
+                                         Title should be                                  ${loginTitle}
+Navigate To Bedroom
+                                         Click Element                                    ${dashboardSidebarBedroomButton}
+                                         Wait until page contains                         ${bedroomLabel}
+Navigate To Bill
+                                         Click Element                                    ${dashboardSidebarBillButton}
+                                         Wait until page contains                         ${billLabel}
+Navigate To Client
+                                         Click Element                                    ${dashboardSidebarClientButton}
+                                         Wait until page contains                         ${clientLabel}
 Navigate To Reservation
                                          Click Element                                    ${dashboardSidebarReservationButton}
                                          Wait until page contains                         ${reservationLabel}
+Navigate To User
+                                         Click Element                                    ${dashboardSidebarUserButton}
+                                         Wait until page contains                         ${userLabel}
+Navigate To Dashboard
+                                         Click Element                                    ${dashboardSidebarDashboardButton}
+                                         Wait until page contains                         ${dashboardLabel}
+Perform Search
+                                         [Arguments]                                      ${searchInput}
+                                         Input Text                                       ${dashboardSearchTextArea}              ${searchInput}
+                                         Click Element                                    ${dashboardSearchButton}
+                                         Wait until page contains                         ${dashboardSearchResultTitle}
 
