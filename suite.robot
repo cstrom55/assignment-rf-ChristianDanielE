@@ -15,7 +15,7 @@ Test setup                     Setup
 Test teardown                  Teardown
 
 *** Variables ***
-# JOÃO PAULO                   THALLYS                                                                        Yuri                 MARCOS OLIVEIVA    YANNE
+# JOÃO PAULO                   THALLYS                          Yuri                 MARCOS OLIVEIVA    YANNE
 ${TestClientName}              THALLYS
 
 ${searchInput}=                Bedroom
@@ -34,7 +34,7 @@ Testcase2_CreateClient
 Testcase3_EditClient
                                Perform Login
                                Navigate To Client
-                               Select Client Edit                                                             ${TestClientName}
+                               Select Client Edit               ${TestClientName}
                                Reset Client Edit
                                Perform Logout
 
@@ -49,9 +49,10 @@ Testcase5_HomeButton
                                Navigate to Reservation
                                Test HomeButton
                                Perform Logout
+#searchfunction fails
 Testcase6_SearchFunction
                                Perform Login
-                               Perform Search                                                                 ${searchInput}
+                               Perform Search                   ${searchInput}
                                Perform Logout
 Testcase7_Navigation
                                Perform Login
@@ -63,11 +64,11 @@ Testcase7_Navigation
                                Navigate To Dashboard
                                Perform Logout
 
-                               ##CreateReservation gives persistence error, can't create new reservations.
+#persistence error, fails
 Testcase8_CreateReservation
                                Perform Login
                                Navigate To Reservation
                                Create Reservation
-                               #Navigate To Reservation
-                               #Delete Reservation
+                               Navigate To Reservation
+                               Delete Reservation
                                Perform Logout
